@@ -46,34 +46,48 @@ Hospital readmission within 30 days is a major concern in diabetic care, indicat
 
 ## 🎯 Objective
 
-To project aim to:
-- Estimate survival times of diabetic patients
-- Test differences in survival between groups using log-rank tests
-- Assess the impact of variables using Cox regression 
-- Check proportional hazards assumptions
+This project aim to:
+1️⃣ Estimate survival times of diabetic patients
+2️⃣ Test differences in survival between groups using log-rank tests
+3️⃣ Assess the impact of variables using Cox regression 
+4️⃣ Check proportional hazards assumptions
 
 ## 🔍 Key Areas Analyzed
 
-- **Time in Hospital** as survival duration
-  
-- **Readmission Status**: (readmitted within 30 days or not)  
+1️⃣ Kaplan-Meier survival curves by:
 
-- **Insulin Types**: (Up, Down, Steady)  
+  - Age group
+    
+  - Insulin usage
+    
+  - Medication group
+    
+2️⃣ Log-rank tests for group comparison
+   
+3️⃣ Cox Proportional Hazards Model (with and without stratification)  
 
-- **Age Groups**: ([0-10), [10-20) ...[90-100))  
+4️⃣ Statistical assumption checking
 
-- **Medication Level**: grouped into (Low, Moderate, High, Very High)
+## 🗃️ Data Source
 
-## Data Source
 The dataset was obtained from the **UCI Machine Learning Repository**.
 
 Name: **Diabetes 130-US hospitals for years 1999–2008**
+
+Records: **101,766** diabetic hospital encounters
 
 Link to the dataset: https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008
 
 ## 📂 Dataset Description  
 
-The dataset contains demographic information, lab results, and hospital outcomes for diabetic patients. For this project, the key variables used include:  
+The dataset contains demographic information, lab results, and hospital outcomes for diabetic patients.
+
+-**Total Records**: 101,766  
+
+- **Initial Columns**: 50
+ 
+For this project, the key variables used include:  
+
 - **readmitted**: Whether the patient was readmitted within 30 days  
 
 - **time_in_hospital**: Number of days spent in the hospital  
@@ -83,4 +97,19 @@ The dataset contains demographic information, lab results, and hospital outcomes
 - **insulin**: Insulin usage pattern
   
 - **num_medications**: Number of medications prescribed
-- 
+
+## 🛠️ Tools Used
+
+- **Language**: Python
+
+- **Libraries**: pandas, numpy, matplotlib, Seaborn, lifeline
+
+## 📒 Methodology  
+
+1️⃣ Import and clean dataset  
+2️⃣ Define event and duration variables  
+3️⃣ Encode categorical features and group medications  
+4️⃣ Plot Kaplan-Meier curves and conduct log-rank tests  
+5️⃣ Fit and validate Cox Proportional Hazards models  
+6️⃣ Stratify by med_group to handle assumption violations
+
