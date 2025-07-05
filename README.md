@@ -230,4 +230,22 @@ The dataset captures patient-level information on hospital stay, medications, in
 
 5️⃣ Most patients were **not readmitted within 30 days**, but a meaningful subset had early readmissions setting the stage for analyzing the influence of age, insulin usage, and medication group on survival probability.
 
+## 📊 Statistical Insights and Data Visualization  
+
+## 📉 Kaplan-Meier Survival Curves
+Kaplan-Meier (KM) estimators were used to visualize the probability of **not being readmitted within 30 days** after hospitalization among diabetic patients. These curves help us understand how long patients stay "readmission-free" and how different variables impact that duration.
+
+### 1️⃣ Overall Survival Curve (All Patients)
+This Kaplan-Meier curve shows the **overall survival probability** across all patients in the dataset, without dividing them into subgroups.
+
+![Screenshot](Screenshot_20250705-023516.jpg)
+
+
+- The survival probability starts at 1 (100%) and gradually decreases over time.
+- A noticeable drop occurs within the first few days, indicating that **early readmission is fairly common**.
+- Most patients were **not readmitted** within 30 days, as shown by the curve leveling off toward the end.
+
+ **Interpretation**: While the overall risk of readmission is moderate, a subset of patients is vulnerable to being readmitted shortly after discharge. This supports the need for identifying high-risk groups using additional variables.
+
+
 
