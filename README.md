@@ -419,3 +419,35 @@ This model includes:
 ✅ The model now satisfies the proportional hazards assumption and provides **valid, interpretable results** for all included predictors.
 
 
+## ✅ Recommendations
+
+Based on the findings from the survival analysis, the following recommendations are proposed:
+
+1️⃣ **Enhanced Monitoring for Older Patients**  
+Patients aged 60 and above had significantly higher hazard ratios for early readmission. Hospitals should implement age-specific discharge plans and post-discharge follow-up strategies.
+
+2️⃣ **Prioritize Stable Insulin Management**  
+Patients with "Steady" or "Up" insulin usage patterns had a lower risk of readmission. Consistent insulin regulation should be encouraged, and sudden changes should trigger closer monitoring.
+
+3️⃣ **Stratify Care Based on Medication Load**  
+The number of medications prescribed was strongly associated with survival. Patients on fewer medications (Low/Moderate) may need more attention during discharge planning and follow-up, as they had higher risk.
+
+4️⃣ **Develop Risk Scoring Systems**  
+Use predictive variables (age, insulin usage, medication count) to build a simple readmission risk scoring tool for diabetic patients at discharge, helping clinicians identify high-risk individuals.
+
+5️⃣ **Educate Patients on Polypharmacy Management**  
+Since medication complexity plays a role in readmission, diabetic patients should receive medication counseling to ensure adherence, understand interactions, and avoid mismanagement.
+
+6️⃣ **Improve Data Collection for Future Modeling**  
+The model’s predictive performance (C-index = 0.53) suggests that key clinical factors may be missing. Including lab values (e.g., HbA1c), comorbidities, or socioeconomic data could significantly improve risk prediction.
+
+## 🙏 Acknowledgement  
+Thanks to the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008) for making this valuable dataset available for research.
+
+
+## 📞 Contact  
+Created by **Ajirola Amudat**  
+🔗 [LinkedIn](https://www.linkedin.com/in/ajirola-amudat-a-3083882b2
+📫 For collaboration or inquiries: [Send a message on LinkedIn](https://www.linkedin.com/in/amudat-ajirola)
+
+![Screenshot](Screenshot_20250311-144911.jpg)
