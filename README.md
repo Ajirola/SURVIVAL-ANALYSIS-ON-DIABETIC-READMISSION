@@ -217,8 +217,6 @@ The dataset captures patient-level information on hospital stay, medications, in
 - **Standard deviation**: 3.4 days  
 - **Minimum**: 1 day  
 - **Maximum**: 14 days
-- 
-### 🔎 Key Observations
 
 1️⃣ **Medication count** ranged from **1 to 81**, with a **median of 16**, showing that half of the patients were prescribed more than 16 medications, reflecting polypharmacy common in chronic conditions like diabetes.
 
@@ -228,6 +226,8 @@ The dataset captures patient-level information on hospital stay, medications, in
 
 4️⃣ The **interquartile range** (10 to 21 meds) suggests that **50%** of patients were prescribed between **10 and 21 medications**, offering a baseline for grouping medication levels (Low–Very High).
 
-5️⃣ Most patients were **not readmitted within 30 days**, but a meaningful subset had early readmissions—setting the stage for analyzing the influence of age, insulin usage, and medication group on survival probability.
+
+
+5️⃣ Most patients were **not readmitted within 30 days**, but a meaningful subset had early readmissions setting the stage for analyzing the influence of age, insulin usage, and medication group on survival probability.
 
 
