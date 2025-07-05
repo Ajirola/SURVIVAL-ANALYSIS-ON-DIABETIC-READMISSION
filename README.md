@@ -33,15 +33,19 @@
 [Contact](#-contact)  
 
 ## 📖 Project Overview  
+
 This project explores **time-to-event** data using **survival analysis** to investigate hospital readmission patterns among **diabetic patients**. Using **Kaplan-Meier estimators**, **log-rank tests**, and **the Cox Proportional Hazards Model**, we identify key factors contributing to early readmissions.
 
 ## 📌 Description
+
 **Survival analysis** is applied to diabetic US-hospital data for years **1999-2008** to study the duration until a patient is readmitted. The focus is on determining whether characteristics such as **insulin use**, **age**, and **medication count** affect **readmission time**.
 
-##❓ Problem Statement
+## ❓ Problem Statement
+
 Hospital readmission within 30 days is a major concern in diabetic care, indicating potential issues in patient management. Understanding the survival patterns of diabetic patients and identifying predictors of early readmission can improve care planning.
 
-##🎯 Objective
+## 🎯 Objective
+
 To project aim to:
 - Estimate survival times of diabetic patients
 - Test differences in survival between groups using log-rank tests
