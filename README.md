@@ -266,5 +266,19 @@ This KM curve divides patients into **age brackets** (e.g., [20–30), [30–40)
 
 **Interpretation**: Age significantly impacts readmission risk. Older patients often have multiple comorbidities, reduced recovery capacity, or challenges with managing their medications post-discharge.
 
+### 4️⃣ Survival Curve by Medication Group
+
+Patients were grouped based on the number of medications prescribed:
+- **Low**: 0–10 medications
+- **Moderate**: 11–20
+- **High**: 21–40
+- **Very High**: 41+
+
+ ![Screenshot](Screenshot_20250705-023613.jpg)
+
+- The **‘Very High’ group** showed the **highest survival**, suggesting robust medical management.
+- The **‘Low’ group** had the **lowest survival**, which may reflect under-treatment or lack of follow-up care.
+
+**Interpretation**: Polypharmacy (taking many medications) may sometimes be protective if it reflects better chronic disease management and adherence to treatment.
 
 
