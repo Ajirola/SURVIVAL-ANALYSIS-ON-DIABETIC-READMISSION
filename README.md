@@ -296,6 +296,9 @@ To compare the survival curves between different groups, **Log-Rank tests** were
 
 
 ### Interpretation:
+The **p-values are all less than 0.001**, which means the differences we observed in the survival curves are **very unlikely to be due to random chance**.
+- In statistics, we often use **p < 0.05** as the threshold for significance. However, when p-values are **much smaller**, like in this case, we report **p < 0.001** to show that the evidence is **even stronger**.
+- This indicates a **very high level of confidence** that **insulin usage patterns**, **age**, **Medication level**, **all significantly influence the time to hospital readmission.**
 
-- The **p-values < 0.001** mean the differences observed in the Kaplan-Meier survival curves are **not due to chance**.
-- Therefore, **insulin usage pattern**, **patient age**, and **medication count** all have a **significant impact on time to readmission**.
+
+
