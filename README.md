@@ -70,3 +70,17 @@ The dataset was obtained from the **UCI Machine Learning Repository**.
 Name: **Diabetes 130-US hospitals for years 1999–2008**
 
 Link to the dataset: https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008
+
+## 📂 Dataset Description  
+
+The dataset contains demographic information, lab results, and hospital outcomes for diabetic patients. For this project, the key variables used include:  
+- **readmitted**: Whether the patient was readmitted within 30 days  
+
+- **time_in_hospital**: Number of days spent in the hospital  
+
+- **age**: Patient age group
+  
+- **insulin**: Insulin usage pattern
+  
+- **num_medications**: Number of medications prescribed
+- 
