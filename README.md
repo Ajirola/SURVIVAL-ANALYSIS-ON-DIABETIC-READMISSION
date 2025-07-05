@@ -33,10 +33,17 @@
 [Contact](#-contact)  
 
 ## 📖 Project Overview  
-This project explores the **factors influencing early readmission** in diabetic patients using **survival analysis**. Leveraging the Kaplan-Meier estimator and Cox Proportional Hazards models, we estimate survival probabilities and model the risk factors associated with being readmitted within 30 days.
+This project explores **time-to-event** data using **survival analysis** to investigate hospital readmission patterns among **diabetic patients**. Using **Kaplan-Meier estimators**, **log-rank tests**, and **the Cox Proportional Hazards Model**, we identify key factors contributing to early readmissions.
 
-## 🔍 Description  
-Hospital readmissions are a significant burden on healthcare systems, especially among diabetic patients. Understanding the **time-to-readmission** and its determinants can improve patient outcomes, reduce costs, and enhance care quality. This project uses **statistical survival methods** to analyze readmission risk and propose data-driven interventions.
+## 📌 Description
+**Survival analysis** is applied to diabetic hospital data to study the duration until a patient is readmitted. The focus is on determining whether characteristics such as **insulin use**, **age**, and **medication count** affect **readmission time**.
 
-## ❗ Problem Statement  
-Although patients are discharged after diabetic-related hospitalizations, **many are readmitted within 30 days** due to complications, poor follow-up, or treatment gaps. Identifying key factors that influence this early readmission risk is critical for healthcare planning and targeted care.
+### ❓ Problem Statement
+Hospital readmission within 30 days is a major concern in diabetic care, indicating potential issues in patient management. Understanding the survival patterns of diabetic patients and identifying predictors of early readmission can improve care planning.
+
+### 🎯 Objective
+To project aim to:
+- Estimate time to readmission using Kaplan-Meier survival curves
+- Test differences in survival between groups using log-rank tests
+- Assess the impact of variables using Cox regression 
+- Check proportional hazards assumptions
