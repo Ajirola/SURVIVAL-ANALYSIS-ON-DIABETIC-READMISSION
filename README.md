@@ -416,8 +416,20 @@ This model includes:
 - **med_group** was **not included as a covariate** in this model because it was used as a **stratification variable** to correct for assumption violation.
 
 
-✅ The model now satisfies the proportional hazards assumption and provides **valid, interpretable results** for all included predictors.
+✅ The model now satisfies the proportional hazards assumption and provides **valid, interpretable results** for all included predictors
 
+## 📏 Model Evaluation Metrics
+
+To assess the performance of the stratified Cox Proportional Hazards model, key statistical metrics were computed:
+
+### 🔢 Evaluation Summary
+
+| Metric                           | Value         | Interpretation |
+|----------------------------------|---------------|----------------|
+| **Concordance Index (C-index)**  | 0.53          | Indicates the model correctly ranked patient risk 53% of the time — only slightly better than random chance (0.5). Suggests **limited predictive accuracy**. |
+| **Partial AIC**                  | 118,583.91    | Akaike Information Criterion. Useful for comparing models: **lower is better**. Helps assess relative model quality. |
+| **Log-Likelihood Ratio Test**    | 97.94 (df = 11) | Tests if the full model is better than a null model. |
+| **−log₂(p)**                     | 50.96         | Corresponds to an **extremely small p-value** (< 0.000001), confirming the model is **statistically significant** overall. |
 
 ## ✅ Recommendations
 
@@ -432,14 +444,8 @@ Patients with "Steady" or "Up" insulin usage patterns had a lower risk of readmi
 3️⃣ **Stratify Care Based on Medication Load**  
 The number of medications prescribed was strongly associated with survival. Patients on fewer medications (Low/Moderate) may need more attention during discharge planning and follow-up, as they had higher risk.
 
-4️⃣ **Develop Risk Scoring Systems**  
-Use predictive variables (age, insulin usage, medication count) to build a simple readmission risk scoring tool for diabetic patients at discharge, helping clinicians identify high-risk individuals.
-
-5️⃣ **Educate Patients on Polypharmacy Management**  
+4️⃣ **Educate Patients on Polypharmacy Management**  
 Since medication complexity plays a role in readmission, diabetic patients should receive medication counseling to ensure adherence, understand interactions, and avoid mismanagement.
-
-6️⃣ **Improve Data Collection for Future Modeling**  
-The model’s predictive performance (C-index = 0.53) suggests that key clinical factors may be missing. Including lab values (e.g., HbA1c), comorbidities, or socioeconomic data could significantly improve risk prediction.
 
 ## 🙏 Acknowledgement  
 Thanks to the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008) for making this valuable dataset available for research.
@@ -447,7 +453,9 @@ Thanks to the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/d
 
 ## 📞 Contact  
 Created by **Ajirola Amudat**  
+
 🔗 [LinkedIn](https://www.linkedin.com/in/ajirola-amudat-a-3083882b2
+
 📫 For collaboration or inquiries: [Send a message on LinkedIn](https://www.linkedin.com/in/amudat-ajirola)
 
 ![Screenshot](Screenshot_20250311-144911.jpg)
