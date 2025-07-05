@@ -297,7 +297,7 @@ To compare the survival curves between different groups, **Log-Rank tests** were
 
 ### Interpretation:
 
-- Since all **p-values are less than **0.05**, the survival differences between groups are **statistically significant**.
+- Since all **p-values** are less than **0.05**, the survival differences between groups are **statistically significant**.
 
 - This means that:
   
@@ -310,4 +310,105 @@ To compare the survival curves between different groups, **Log-Rank tests** were
 These findings support what we observed in the Kaplan-Meier plots survival patterns differ meaningfully across groups.
 
 
+## ⚙️ Cox Proportional Hazards Model
+
+To analyze the factors that influence the time to readmission among diabetic patients, a **Cox Proportional Hazards model** was fitted using 54,383 observations. The model estimated **hazard ratios (HRs)** for patient characteristics such as age, insulin usage, and medication level.
+
+---
+
+### 1️⃣ Initial Cox Model (Before Stratification)
+
+The initial model included:
+- **age** group  with (10-20 as the reference)
+- **insulin pattern** (Down, Up, Steady with down as the reference)  
+- **med_group** (Low, Moderate, High, Very High  with Low as the reference)
+
+#### Key Results
+
+| Variable               | Hazard Ratio (HR) | 95% CI           | p-value   | Significance |
+|------------------------|-------------------|------------------|-----------|--------------|
+| Age [20–30)            | 5.21              | 1.66 – 16.31     | < 0.005   | ✅ Significant |
+| Age [30–40)            | 3.85              | 1.23 – 12.01     | < 0.005   | ✅ Significant |
+| Age [40–50)            | 3.54              | 1.14 – 11.03     | < 0.005   | ✅ Significant |
+| Age [50–60)            | 3.13              | 1.01 – 9.75      | < 0.005   | ✅ Significant |
+| Age [60–70)            | 3.29              | 1.06 – 10.23     | < 0.005   | ✅ Significant |
+| Age [70–80)            | 3.15              | 1.01 – 9.78      | < 0.005   | ✅ Significant |
+| Age [80–90)            | 3.08              | 0.99 – 9.56      | < 0.005   | ✅ Significant |
+| **Age [90–100)**       | **2.96**          | **0.94 – 9.27**  | **0.06**  | ❌ Not significant |
+| Insulin (Steady)       | 0.87              | 0.82 – 0.92      | < 0.005   | ✅ Significant |
+| Insulin (Up)           | 0.87              | 0.81 – 0.93      | < 0.005   | ✅ Significant |
+| Med Group (Moderate)   | 0.71              | 0.66 – 0.76      | < 0.005   | ✅ Significant |
+| Med Group (High)       | 0.41              | 0.38 – 0.44      | < 0.005   | ✅ Significant |
+| Med Group (Very High)  | 0.23              | 0.19 – 0.28      | < 0.005   | ✅ Significant |
+
+**Interpretation**:
+- Most age groups, insulin types, and medication levels were significantly associated with early readmission.
+- Patients with **higher medication levels** or on **Steady insulin** had significantly **lower risk** of being readmitted.
+- The **age group [90–100)** had a high hazard ratio but was **not statistically significant** (p = 0.06).
+
+## ✅ Proportional Hazards Assumption Test
+
+After fitting the Cox model, the **Proportional Hazards (PH) assumption** was tested using **Schoenfeld residuals**. This test checks if the effect of each variable remains **constant over time** — a key requirement for valid Cox regression.
+
+---
+
+### 📊 Summary of Schoenfeld Residuals Test
+
+| Variable               | Test Type | χ² Statistic | p-value   | PH Assumption |
+|------------------------|-----------|--------------|-----------|---------------|
+| age_[10–20)            | KM        | 0.42         | 0.52      | ✅ Passed      |
+| age_[20–30)            | KM        | 0.39         | 0.53      | ✅ Passed      |
+| age_[30–40)            | KM        | 0.06         | 0.80      | ✅ Passed      |
+| age_[40–50)            | KM        | 0.09         | 0.77      | ✅ Passed      |
+| age_[50–60)            | KM        | 0.04         | 0.84      | ✅ Passed      |
+| age_[60–70)            | KM        | 0.07         | 0.80      | ✅ Passed      |
+| age_[70–80)            | KM        | 0.03         | 0.87      | ✅ Passed      |
+| age_[80–90)            | KM        | 0.02         | 0.89      | ✅ Passed      |
+| age_[90–100)           | KM        | 0.08         | 0.77      | ✅ Passed      |
+| insulin_Steady         | KM        | 0.13         | 0.72      | ✅ Passed      |
+| insulin_Up             | KM        | 0.13         | 0.72      | ✅ Passed      |
+| **med_group_Moderate** | KM        | 5.66         | 0.02      | ❌ Violated    |
+| **med_group_High**     | KM        | 86.85        | <0.005    | ❌ Violated    |
+| **med_group_Very High**| KM        | 125.86       | <0.005    | ❌ Violated    |
+
+> **Note**: The same pattern was observed in the **rank test**, which confirmed that **med_group** violates the PH assumption across all levels.
+
+### Interpretation
+
+- ✅ **All age groups** and **insulin types** passed the PH assumption test, their effects on readmission risk were constant over time.
+- ❌ **Medication group (**med_group**) violated the PH assumption**, indicating that the impact of medication level **changes over time**.
+
+This made the initial model **invalid** for interpreting the effect of medication levels.
+
+- Since this violates a core assumption of the Cox model, we addressed it by using a **Stratified Cox Model**, allowing each medication group its own baseline hazard.
+
+
+
+### ✅ 4️⃣ Stratified Model Assumption Check
+
+After stratifying by `med_group`:
+- ✅ The **global Schoenfeld test** returned **p > 0.05**
+- ✅ All predictors met the PH assumption
+
+---
+
+### 🔢 Final Stratified Cox Model (Results)
+
+| Variable         | Hazard Ratio (HR) | p-value   | Interpretation                            |
+|------------------|-------------------|-----------|-------------------------------------------|
+| Insulin (Up)     | ~0.88             | < 0.05    | Lower risk compared to baseline insulin group |
+| Insulin (Steady) | ~0.88             | < 0.05    | Protective effect remains                 |
+| Age [90–100)     | ~2.96             | 0.06      | Still not statistically significant       |
+
+✅ Model assumptions now hold, and variable estimates are valid.
+
+---
+
+### 🧠 Conclusion
+
+- The initial Cox model showed significant effects from **age**, **insulin**, and **medication level**, but was invalid due to a PH assumption violation by `med_group`.
+- After stratifying the model by `med_group`, the **assumption was satisfied**, and the effects of **age and insulin** remained clear and interpretable.
+- The final model confirms that:
+  - 📉 Patients on **Steady or Up insulin** have reduced risk of readmission.
+  - 🎂 Older age groups generally face higher risk — though **age [90–100)** did not reach significance.
 
