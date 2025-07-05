@@ -418,18 +418,19 @@ This model includes:
 
 ✅ The model now satisfies the proportional hazards assumption and provides **valid, interpretable results** for all included predictors
 
+
+
 ## 📏 Model Evaluation Metrics
 
 To assess the performance of the stratified Cox Proportional Hazards model, key statistical metrics were computed:
 
-### 🔢 Evaluation Summary
-
-| Metric                           | Value         | Interpretation |
-|----------------------------------|---------------|----------------|
-| **Concordance Index (C-index)**  | 0.53          | Indicates the model correctly ranked patient risk 53% of the time — only slightly better than random chance (0.5). Suggests **limited predictive accuracy**. |
-| **Partial AIC**                  | 118,583.91    | Akaike Information Criterion. Useful for comparing models: **lower is better**. Helps assess relative model quality. |
-| **Log-Likelihood Ratio Test**    | 97.94 (df = 11) | Tests if the full model is better than a null model. |
-| **−log₂(p)**                     | 50.96         | Corresponds to an **extremely small p-value** (< 0.000001), confirming the model is **statistically significant** overall. |
+#### Model Evaluation summary
+| Metric                           | Value         |
+|----------------------------------|---------------|
+| **Concordance Index (C-index)**  | 0.53          |
+| **Partial AIC**                  | 118,583.91    |
+| **Log-Likelihood Ratio Test**    | 97.94 (df = 11) |
+| **−log₂(p)**                     | 50.96         |
 
 ## ✅ Recommendations
 
