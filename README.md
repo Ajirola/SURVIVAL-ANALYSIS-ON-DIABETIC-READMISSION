@@ -199,4 +199,35 @@ To analyze the effect of medication usage more meaningfully, the continuous vari
 | Final Columns                | 10                |
 
 The dataset was now clean, well-structured, and ready for **exploratory data analysis** and **survival modeling**.
+## 📈 EXPLORATORY DATA ANALYSIS (EDA)
+
+### 📊 Descriptive Statistics
+
+The dataset captures patient-level information on hospital stay, medications, insulin usage, and readmission outcomes, providing rich insights into the risk factors for early hospital return.
+
+- **Mean number of medications**: 16  
+- **Standard deviation of medications**: 8.12  
+- **Minimum medications prescribed**: 1  
+- **25% (Q1)**: 10  
+- **50% (Median)**: 16  
+- **75% (Q3)**: 21  
+- **Maximum medications prescribed**: 81  
+
+- **Mean time in hospital**: 4.7 days  
+- **Standard deviation**: 3.4 days  
+- **Minimum**: 1 day  
+- **Maximum**: 14 days
+- 
+### 🔎 Key Observations
+
+1️⃣ **Medication count** ranged from **1 to 81**, with a **median of 16**, showing that half of the patients were prescribed more than 16 medications, reflecting polypharmacy common in chronic conditions like diabetes.
+
+2️⃣ The **average number of medications** was **16**, with 75% of patients prescribed up to **21 medications**, suggesting a moderate-to-high treatment burden.
+
+3️⃣ The **average hospital stay** was approximately **4.7 days**, with most patients staying less than a week. Only a few had extended stays up to **14 days**, which could indicate complications or comorbidities.
+
+4️⃣ The **interquartile range** (10 to 21 meds) suggests that **50%** of patients were prescribed between **10 and 21 medications**, offering a baseline for grouping medication levels (Low–Very High).
+
+5️⃣ Most patients were **not readmitted within 30 days**, but a meaningful subset had early readmissions—setting the stage for analyzing the influence of age, insulin usage, and medication group on survival probability.
+
 
