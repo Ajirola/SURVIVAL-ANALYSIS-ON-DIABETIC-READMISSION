@@ -59,3 +59,10 @@ To project aim to:
 - **Age Groups**: ([0-10), [10-20) ...[90-100))  
 
 - **Medication Level**: grouped into (Low, Moderate, High, Very High)
+
+## Data Source
+The dataset was obtained from the **UCI Machine Learning Repository**.
+
+Name: **Diabetes 130-US hospitals for years 1999–2008**
+
+Link to the dataset: https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008
