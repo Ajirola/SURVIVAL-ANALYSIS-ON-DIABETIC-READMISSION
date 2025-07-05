@@ -51,11 +51,11 @@ To project aim to:
 ## 🔍 Key Areas Analyzed
 
 - **Time in Hospital** as survival duration
--   
-- **Readmission Status** (readmitted within 30 days or not)  
+  
+- **Readmission Status**: (readmitted within 30 days or not)  
 
-- **Insulin Types** (`Up`, `Down`, `Steady`)  
+- **Insulin Types**: (Up, Down, Steady)  
 
-- **Age Groups** (`[0-10)`, `[10-20)`...`[90-100)`)  
+- **Age Groups**: ([0-10), [10-20) ...[90-100))  
 
-- **Medication Level** grouped into `Low`, `Moderate`, `High`, `Very High`  
+- **Medication Level**: grouped into (Low, Moderate, High, Very High)
