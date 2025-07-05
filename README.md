@@ -282,3 +282,20 @@ Patients were grouped based on the number of medications prescribed:
 **Interpretation**: Polypharmacy (taking many medications) may sometimes be protective if it reflects better chronic disease management and adherence to treatment.
 
 
+## 📊 Log-Rank Test Results
+
+To compare the survival curves between different groups, **Log-Rank tests** were performed. This statistical test checks whether the differences in survival are **statistically significant**.
+
+### ✅ Summary of Results
+
+| Variable      | Chi-Square (χ²) | p-value    | Interpretation                                |
+|---------------|------------------|------------|-----------------------------------------------|
+| **Insulin**   | 19.31            | p < 0.001  | Significant survival differences by insulin type |
+| **Age**       | 124.43           | p < 0.001  | Survival probability differs significantly across age groups |
+| **Med Group** | 729.34           | p < 0.001  | Strong evidence that medication level affects readmission timing |
+
+
+### Interpretation:
+
+- The **p-values < 0.001** mean the differences observed in the Kaplan-Meier survival curves are **not due to chance**.
+- Therefore, **insulin usage pattern**, **patient age**, and **medication count** all have a **significant impact on time to readmission**.
