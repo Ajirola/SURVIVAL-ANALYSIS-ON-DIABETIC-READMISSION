@@ -290,15 +290,24 @@ To compare the survival curves between different groups, **Log-Rank tests** were
 
 | Variable      | Chi-Square (χ²) | p-value    | Interpretation                                |
 |---------------|------------------|------------|-----------------------------------------------|
-| **Insulin**   | 19.31            | p < 0.001  | Significant survival differences by insulin type |
-| **Age**       | 124.43           | p < 0.001  | Survival probability differs significantly across age groups |
-| **Med Group** | 729.34           | p < 0.001  | Strong evidence that medication level affects readmission timing |
+| **Insulin**   | 19.31            | p < 0.05   | Significant survival differences by insulin type |
+| **Age**       | 124.43           | p < 0.05   | Survival probability differs significantly across age groups |
+| **Med Group** | 729.34           | p < 0.05   | Strong evidence that medication level affects readmission timing |
 
 
 ### Interpretation:
-The **p-values are all less than 0.001**, which means the differences we observed in the survival curves are **very unlikely to be due to random chance**.
-- In statistics, we often use **p < 0.05** as the threshold for significance. However, when p-values are **much smaller**, like in this case, we report **p < 0.001** to show that the evidence is **even stronger**.
-- This indicates a **very high level of confidence** that **insulin usage patterns**, **age**, **Medication level**, **all significantly influence the time to hospital readmission.**
+
+- Since all **p-values are less than **0.05**, the survival differences between groups are **statistically significant**.
+
+- This means that:
+  
+- Patients with different **insulin usage patterns** have different risks of early readmission.
+
+- **Age** significantly affects how long patients stay out of the hospital.
+
+- The number of **medications prescribed** is linked to readmission timing.
+
+These findings support what we observed in the Kaplan-Meier plots survival patterns differ meaningfully across groups.
 
 
 
