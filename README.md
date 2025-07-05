@@ -246,6 +246,25 @@ This Kaplan-Meier curve shows the **overall survival probability** across all pa
 - Most patients were **not readmitted** within 30 days, as shown by the curve leveling off toward the end.
 
  **Interpretation**: While the overall risk of readmission is moderate, a subset of patients is vulnerable to being readmitted shortly after discharge. This supports the need for identifying high-risk groups using additional variables.
+ 
+ ### 2️⃣ Survival Curve by Insulin Type
+This curve compares survival probabilities based on insulin usage: **Up**, **Down**, and **Steady**.
+
+![Screenshot](Screenshot_20250705-023540.jpg)
+- Patients with **Steady insulin** had the **highest survival probability**.
+- Those with **Up insulin changes** experienced the **steepest decline**, meaning they were readmitted sooner.
+- Patients on **Down insulin** fell in between.
+
+ **Interpretation**: Patients whose insulin dosage was increased (Up) might be undergoing more severe diabetes episodes, leading to early readmissions.
+
+ ### 3️⃣ Survival Curve by Age Group
+This KM curve divides patients into **age brackets** (e.g., [20–30), [30–40), ..., [90–100)).
+
+![Screenshot](Screenshot_20250705-023559.jpg)
+- **Younger age groups** had **higher survival probabilities**.
+- The **elderly (especially 80+)** were more likely to be readmitted early.
+
+**Interpretation**: Age significantly impacts readmission risk. Older patients often have multiple comorbidities, reduced recovery capacity, or challenges with managing their medications post-discharge.
 
 
 
