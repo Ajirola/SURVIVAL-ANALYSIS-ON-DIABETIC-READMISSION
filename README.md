@@ -315,7 +315,9 @@ These findings support what we observed in the Kaplan-Meier plots survival patte
 To analyze the factors that influence the time to readmission among diabetic patients, a **Cox Proportional Hazards model** was fitted using 54,383 observations. The model estimated **hazard ratios (HRs)** for patient characteristics such as age, insulin usage, and medication level.
 
 HR > 1, **increased risk** of the event
+
 HR < 1, **decreased risk** of the event
+
 HR = 1, **no effect of risk** of the event
 
 ### 1️⃣ Initial Cox Model (Before Stratification)
